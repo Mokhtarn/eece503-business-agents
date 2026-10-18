@@ -1,0 +1,118 @@
+{
+  "as_of": "2026-10-18",
+  "note": "Generic accessory categories, not branded or model-specific. These fictional items and stock prices are simulated; compatibility is not guaranteed. Check before recommending.",
+  "items": [
+    {
+      "id": "ACC-001",
+      "name": "Acoustic guitar steel string set",
+      "price_usd": 14,
+      "stock_quantity": 18,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-002",
+      "name": "Electric guitar string set",
+      "price_usd": 12,
+      "stock_quantity": 22,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-003",
+      "name": "Classical guitar nylon string set",
+      "price_usd": 15,
+      "stock_quantity": 12,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-004",
+      "name": "Pick variety pack",
+      "price_usd": 7,
+      "stock_quantity": 30,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-005",
+      "name": "Clip-on guitar tuner",
+      "price_usd": 24,
+      "stock_quantity": 10,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-006",
+      "name": "Capo",
+      "price_usd": 19,
+      "stock_quantity": 10,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-007",
+      "name": "Guitar strap",
+      "price_usd": 25,
+      "stock_quantity": 12,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-008",
+      "name": "Instrument cable 3 m",
+      "price_usd": 22,
+      "stock_quantity": 16,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-009",
+      "name": "Padded guitar gig bag",
+      "price_usd": 59,
+      "stock_quantity": 8,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-010",
+      "name": "Folding guitar stand",
+      "price_usd": 29,
+      "stock_quantity": 9,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-011",
+      "name": "X-style keyboard stand",
+      "price_usd": 55,
+      "stock_quantity": 8,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-012",
+      "name": "Universal-style sustain pedal",
+      "price_usd": 39,
+      "stock_quantity": 8,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-013",
+      "name": "Wired practice headphones",
+      "price_usd": 59,
+      "stock_quantity": 10,
+      "availability_status": "in_stock",
+      "simulated": true
+    },
+    {
+      "id": "ACC-014",
+      "name": "Adjustable piano bench",
+      "price_usd": 119,
+      "stock_quantity": 5,
+      "availability_status": "in_stock",
+      "simulated": true
+    }
+  ]
+}

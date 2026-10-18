@@ -1,0 +1,44 @@
+{
+  "store_name": "Keys & Strings Piano & Guitar Shop",
+  "business_type": "Fictional independently run music store",
+  "location": "Beirut, Lebanon (fictional showroom; no street address assigned)",
+  "team": [
+    {
+      "name": "Mokhtar Nasser",
+      "role": "Co-founder & Piano Specialist"
+    },
+    {
+      "name": "Muhiddine Aleily",
+      "role": "Co-founder & Guitar Specialist"
+    },
+    {
+      "name": "Jad Haidar",
+      "role": "Customer Experience & Operations"
+    }
+  ],
+  "categories": [
+    "Acoustic upright and grand pianos",
+    "Portable and cabinet digital pianos",
+    "Steel-string and classical acoustic guitars",
+    "Acoustic-electric guitars",
+    "Electric guitars",
+    "Electric guitar combo amplifiers",
+    "Essential instrument accessories"
+  ],
+  "opening_hours": {
+    "monday": "10:00-18:00",
+    "tuesday": "10:00-18:00",
+    "wednesday": "10:00-18:00",
+    "thursday": "10:00-18:00",
+    "friday": "10:00-18:00",
+    "saturday": "10:00-18:00",
+    "sunday": "Closed"
+  },
+  "channels": [
+    "Showroom inquiries",
+    "Online customer-support chatbot for information and lead collection"
+  ],
+  "is_fictional": true,
+  "email": "Not assigned; chatbot must not invent one",
+  "phone": "Not assigned; chatbot must not invent one"
+}

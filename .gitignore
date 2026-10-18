@@ -1,0 +1,70 @@
+# C3 submission allowlist. New root files stay local until explicitly included.
+# Keep the runnable app/notebook, required business assets, setup instructions,
+# documented tool schemas and the final demo video.
+/*
+!/.gitignore
+!/.env.example
+!/README.md
+!/requirements.txt
+!/app.py
+!/business_agent.py
+!/business_agent.ipynb
+
+!/me/
+/me/*
+!/me/about_business.pdf
+!/me/business_summary.txt
+
+!/data/
+/data/*
+!/data/product_catalogue.json
+!/data/store_info.json
+!/data/store_policies.json
+!/data/accessories.json
+
+!/docs/
+/docs/*
+!/docs/TOOLS.md
+
+# Stylesheet and avatar loaded by app.py.
+!/assets/
+/assets/*
+!/assets/app.css
+!/assets/key_avatar.svg
+
+# Local development tools stay out of the submission.
+/tests/
+/scripts/
+
+# Final C3 recordings; other drafts stay local.
+!/demo/
+/demo/*
+!/demo/c3_demo.mp4
+!/demo/MokhtarNasser_keys&strings_demo.mp4
+
+# Secrets, generated files, and local tooling remain excluded at any depth.
+.env
+.env.*
+!.env.example
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+htmlcov/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+logs/
+*.log
+*.sqlite3
+*.db
+tmp/
+.gradio/

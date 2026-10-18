@@ -1,0 +1,7 @@
+# Runtime versions checked locally with Python 3.14.
+openai==3.35.1
+python-dotenv==1.2.4
+gradio==6.30.0
+pypdf==6.21.1
+# Notebook execution and VS Code/Jupyter kernel support.
+ipykernel==7.4.0

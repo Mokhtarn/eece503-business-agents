@@ -1,0 +1,650 @@
+/* Keys & Strings: ivory, ebony and brass. Loaded by app.create_demo() at launch. */
+
+:root {
+  --ks-ink: #231d18;
+  --ks-ebony: #1c1714;
+  --ks-ivory: #fbf7ef;
+  --ks-brass: #b8873b;
+  --ks-brass-bright: #d9a95a;
+  --ks-muted: #7a6d5f;
+  --ks-line: #e6dbc8;
+  --ks-surface: #fffdf8;
+  --ks-surface-2: #f6efe2;
+  --ks-side: #efe7d8;
+  --ks-today: #f5e9d0;
+  --ks-open: #3f7d58;
+  --ks-closed: #a5523a;
+  --ks-route-general: #b8873b;
+  --ks-route-lead: #5f8a6e;
+  --ks-route-feedback: #b5654a;
+  --ks-display: "Fraunces", Georgia, "Times New Roman", serif;
+}
+
+.dark {
+  color-scheme: dark;
+  --ks-ink: #efe7da;
+  --ks-muted: #a39582;
+  --ks-line: #352d26;
+  --ks-surface: #1b1714;
+  --ks-surface-2: #231e1a;
+  --ks-side: #171411;
+  --ks-today: #3a2c1a;
+  --ks-open: #7fbf95;
+  --ks-closed: #e08e74;
+}
+
+/* One octave of piano keys, repeated as the hero's bottom edge. */
+.ks-keys {
+  height: 28px;
+  margin: 0 -28px;
+  background-color: var(--ks-ivory);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='126' height='30'%3E%3Cg fill='none' stroke='%23d8cdb9' stroke-width='1'%3E%3Cpath d='M18.5 0v30M36.5 0v30M54.5 0v30M72.5 0v30M90.5 0v30M108.5 0v30M126 0v30'/%3E%3C/g%3E%3Cg fill='%231c1714'%3E%3Crect x='12.5' y='0' width='11' height='18' rx='1.5'/%3E%3Crect x='30.5' y='0' width='11' height='18' rx='1.5'/%3E%3Crect x='66.5' y='0' width='11' height='18' rx='1.5'/%3E%3Crect x='84.5' y='0' width='11' height='18' rx='1.5'/%3E%3Crect x='102.5' y='0' width='11' height='18' rx='1.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: -6px 0;
+  box-shadow: inset 0 3px 0 var(--ks-brass);
+}
+
+/* ---------- Hero (ChatInterface description) ---------- */
+
+.gradio-container .ks-hero {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 360px);
+  gap: 8px 32px;
+  align-items: end;
+  padding: 22px 28px 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 140% at 100% 0%, rgba(184, 135, 59, 0.22), transparent 55%),
+    var(--ks-ebony);
+  color: var(--ks-ivory);
+  box-shadow: 0 18px 40px -24px rgba(28, 23, 20, 0.55);
+}
+
+.dark .gradio-container .ks-hero {
+  box-shadow: 0 0 0 1px #2c241e, 0 18px 40px -24px rgba(0, 0, 0, 0.8);
+}
+
+.gradio-container .ks-hero .ks-keys {
+  grid-column: 1 / -1;
+  margin-top: 16px;
+}
+
+.gradio-container .ks-hero p,
+.gradio-container .ks-hero h1 {
+  margin: 0;
+  color: inherit;
+}
+
+.gradio-container .ks-hero .ks-eyebrow {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ks-brass-bright);
+}
+
+.gradio-container .ks-hero .ks-title {
+  margin: 6px 0 8px;
+  font-family: var(--ks-display);
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--ks-ivory);
+}
+
+.gradio-container .ks-hero .ks-title span {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ks-brass-bright);
+}
+
+.gradio-container .ks-hero .ks-lede {
+  max-width: 52ch;
+  font-size: 15.5px;
+  line-height: 1.5;
+  color: rgba(251, 247, 239, 0.82);
+}
+
+.gradio-container .ks-hero .ks-lede strong {
+  color: var(--ks-ivory);
+}
+
+.gradio-container .ks-hero .ks-disclaimer {
+  padding-left: 14px;
+  border-left: 2px solid rgba(217, 169, 90, 0.5);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(251, 247, 239, 0.6);
+}
+
+/* ---------- Chat area ---------- */
+
+#ks-chat {
+  border-radius: 20px;
+  border-color: var(--ks-line);
+  background: var(--ks-surface);
+  box-shadow: 0 1px 2px rgba(35, 29, 24, 0.04), 0 12px 32px -20px rgba(35, 29, 24, 0.18);
+}
+
+#ks-chat .message-row .user.message,
+#ks-chat .message-row .bot.message {
+  border-radius: 18px;
+  padding: 10px 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  box-shadow: none;
+}
+
+/* Cap the row, not its content: the row shrinks to fit, so a percentage on
+   anything inside it would wrap short messages one letter per line. */
+#ks-chat .message-row.user-row {
+  max-width: min(620px, 85%);
+}
+
+#ks-chat .bot-row .flex-wrap {
+  max-width: min(780px, 100%);
+}
+
+#ks-chat .message-row .user.message {
+  border-color: var(--ks-ebony);
+  border-bottom-right-radius: 6px;
+  background: var(--ks-ebony);
+}
+
+#ks-chat .message-row .user.message,
+#ks-chat .message-row .user.message .prose,
+#ks-chat .message-row .user.message .prose * {
+  color: var(--ks-ivory);
+}
+
+.dark #ks-chat .message-row .user.message {
+  border-color: #5e4121;
+  background: #3a2c1a;
+}
+
+#ks-chat .message-row .bot.message {
+  border-color: var(--ks-line);
+  border-bottom-left-radius: 6px;
+  background: var(--ks-surface-2);
+}
+
+#ks-chat .avatar-container {
+  width: 38px;
+  height: 38px;
+  border: none;
+  border-radius: 12px;
+}
+
+#ks-chat .avatar-container img {
+  padding: 0;
+  border-radius: 12px;
+}
+
+.dark #ks-chat .avatar-container img {
+  box-shadow: 0 0 0 1px #3a2f27;
+}
+
+#ks-chat .bot.message table {
+  margin: 10px 0;
+  border-collapse: collapse;
+  border: none;
+  font-size: 14px;
+}
+
+#ks-chat .bot.message tr {
+  border: none;
+}
+
+#ks-chat .bot.message th,
+#ks-chat .bot.message td {
+  padding: 7px 14px 7px 0;
+  border: none;
+  border-bottom: 1px solid var(--ks-line);
+  background: transparent;
+  text-align: left;
+}
+
+#ks-chat .bot.message th {
+  border-bottom: 2px solid var(--ks-brass);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ks-muted);
+}
+
+#ks-chat .bot.message tr:last-child td {
+  border-bottom: none;
+}
+
+#ks-chat .bot.message strong {
+  color: var(--ks-ink);
+}
+
+#ks-chat .message-buttons {
+  opacity: 0.55;
+  transition: opacity 0.15s ease;
+}
+
+#ks-chat .message-buttons:hover {
+  opacity: 1;
+}
+
+/* Empty state: welcome text and example cards. */
+
+#ks-chat .placeholder-content {
+  justify-content: safe center;
+  gap: 22px;
+}
+
+#ks-chat .placeholder-content > * {
+  flex: 0 0 auto;
+}
+
+#ks-chat .placeholder {
+  height: auto;
+}
+
+.gradio-container .ks-welcome-mark {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 14px;
+  border-radius: 16px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%231c1714'/%3E%3Crect x='12' y='15' width='40' height='3' rx='1.5' fill='%23c9974a'/%3E%3Crect x='12.5' y='20' width='12.5' height='30' rx='2' fill='%23fbf7ef'/%3E%3Crect x='25.75' y='20' width='12.5' height='30' rx='2' fill='%23fbf7ef'/%3E%3Crect x='39' y='20' width='12.5' height='30' rx='2' fill='%23fbf7ef'/%3E%3Crect x='21' y='20' width='8' height='17' rx='1.5' fill='%231c1714'/%3E%3Crect x='35' y='20' width='8' height='17' rx='1.5' fill='%231c1714'/%3E%3C/svg%3E") center / cover;
+  box-shadow: 0 10px 24px -12px rgba(28, 23, 20, 0.6);
+}
+
+.dark .gradio-container .ks-welcome-mark {
+  box-shadow: 0 0 0 1px #3a2f27, 0 10px 24px -12px rgba(0, 0, 0, 0.8);
+}
+
+.gradio-container .ks-welcome {
+  text-align: center;
+}
+
+.gradio-container .ks-welcome p {
+  margin: 0 auto;
+  max-width: 46ch;
+  color: var(--ks-muted);
+  font-size: 15px;
+}
+
+.gradio-container .ks-welcome .ks-welcome-title {
+  margin-bottom: 8px;
+  font-family: var(--ks-display);
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--ks-ink);
+}
+
+#ks-chat .examples {
+  gap: 10px;
+  max-width: 760px;
+}
+
+#ks-chat .example {
+  position: relative;
+  min-height: 0;
+  padding: 14px 40px 14px 16px;
+  border: 1px solid var(--ks-line);
+  border-radius: 14px;
+  background: var(--ks-surface);
+  box-shadow: 0 1px 2px rgba(35, 29, 24, 0.04);
+  transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+#ks-chat .example::after {
+  content: "\2192";
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--ks-brass);
+  font-size: 16px;
+  transition: transform 0.15s ease;
+}
+
+#ks-chat .example:hover {
+  border-color: var(--ks-brass);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px -14px rgba(184, 135, 59, 0.7);
+}
+
+#ks-chat .example:hover::after {
+  transform: translate(3px, -50%);
+}
+
+#ks-chat .example-text {
+  font-size: 14.5px;
+  font-weight: 500;
+  color: var(--ks-ink);
+}
+
+/* ---------- Composer ---------- */
+
+.gradio-container .gr-group:has(#ks-input) {
+  border: 1px solid var(--ks-line);
+  border-radius: 18px;
+  background: var(--ks-surface);
+  box-shadow: 0 1px 2px rgba(35, 29, 24, 0.04), 0 10px 28px -20px rgba(35, 29, 24, 0.25);
+  overflow: hidden;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.gradio-container .gr-group:has(#ks-input):focus-within {
+  border-color: var(--ks-brass);
+  box-shadow: 0 0 0 3px rgba(184, 135, 59, 0.18);
+}
+
+.gradio-container .gr-group:has(#ks-input) .gr-group,
+.gradio-container .gr-group:has(#ks-input) .styler,
+.gradio-container .gr-group:has(#ks-input) .form {
+  border: none;
+  background: transparent;
+}
+
+#ks-input {
+  padding: 8px 8px 8px 16px;
+  background: transparent;
+}
+
+#ks-input textarea {
+  padding: 8px 4px;
+  background: transparent;
+  font-size: 15px;
+}
+
+#ks-input .submit-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--ks-ebony);
+  color: var(--ks-ivory);
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+#ks-input .submit-button:hover {
+  background: var(--ks-brass);
+  transform: translateY(-1px);
+}
+
+.dark #ks-input .submit-button {
+  background: var(--ks-brass);
+  color: var(--ks-ebony);
+}
+
+.dark #ks-input .submit-button:hover {
+  background: var(--ks-brass-bright);
+}
+
+/* ---------- Sidebar ---------- */
+
+#ks-sidebar {
+  background: var(--ks-side);
+  border-right: 1px solid var(--ks-line);
+}
+
+#ks-sidebar .sidebar-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--ks-line) transparent;
+}
+
+#ks-sidebar .ks-side {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 4px 2px 20px;
+  color: var(--ks-ink);
+  font-size: 14px;
+}
+
+#ks-sidebar .ks-side ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#ks-sidebar .ks-side li {
+  margin: 0;
+}
+
+#ks-sidebar .ks-side p {
+  margin: 0;
+}
+
+#ks-sidebar .ks-side-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 10px;
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-side-label small {
+  font-size: inherit;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  opacity: 0.8;
+}
+
+#ks-sidebar .ks-status {
+  display: grid;
+  grid-template-columns: 8px 1fr;
+  column-gap: 10px;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 9px 12px;
+  border-radius: 12px;
+  background: var(--ks-surface);
+  border: 1px solid var(--ks-line);
+  font-size: 13px;
+}
+
+#ks-sidebar .ks-status strong {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#ks-sidebar .ks-status span {
+  grid-column: 2;
+  font-size: 12.5px;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-status::before {
+  content: "";
+  grid-row: 1;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ks-muted);
+}
+
+#ks-sidebar .ks-status.is-open { color: var(--ks-open); }
+#ks-sidebar .ks-status.is-open::before {
+  background: var(--ks-open);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--ks-open) 22%, transparent);
+}
+#ks-sidebar .ks-status.is-closed { color: var(--ks-closed); }
+#ks-sidebar .ks-status.is-closed::before { background: var(--ks-closed); }
+
+#ks-sidebar .ks-hours li {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-variant-numeric: tabular-nums;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-hours li.is-today {
+  background: var(--ks-today);
+  color: var(--ks-ink);
+  font-weight: 600;
+}
+
+#ks-sidebar .ks-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+#ks-sidebar .ks-stats div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  border: 1px solid var(--ks-line);
+  border-radius: 12px;
+  background: var(--ks-surface);
+}
+
+#ks-sidebar .ks-stats strong {
+  font-family: var(--ks-display);
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+#ks-sidebar .ks-stats span {
+  font-size: 12.5px;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-fine {
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-abilities,
+#ks-sidebar .ks-team {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+#ks-sidebar .ks-abilities li,
+#ks-sidebar .ks-team li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#ks-sidebar .ks-abilities li > span:last-child,
+#ks-sidebar .ks-team li > span:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.35;
+}
+
+#ks-sidebar .ks-abilities small,
+#ks-sidebar .ks-team small {
+  font-size: 12.5px;
+  color: var(--ks-muted);
+}
+
+#ks-sidebar .ks-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: 3px;
+  background: var(--ks-route-general);
+}
+
+#ks-sidebar .ks-dot[data-route="lead"] { background: var(--ks-route-lead); }
+#ks-sidebar .ks-dot[data-route="feedback"] { background: var(--ks-route-feedback); }
+
+#ks-sidebar .ks-initials {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: var(--ks-ebony);
+  color: var(--ks-ivory);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.dark #ks-sidebar .ks-initials {
+  background: #3a2c1a;
+  color: var(--ks-brass-bright);
+}
+
+/* ---------- Small screens ----------
+   Gradio prefixes selectors inside @media with ".gradio-container ... .contain",
+   so these rules use bare selectors (the prefix supplies the specificity). */
+
+@media (max-width: 720px) {
+  .ks-hero {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 18px 18px 0;
+  }
+
+  .ks-hero .ks-title {
+    font-size: 32px;
+  }
+
+  .ks-hero .ks-lede {
+    display: none;
+  }
+
+  .ks-hero .ks-disclaimer {
+    font-size: 12px;
+  }
+
+  .ks-hero .ks-keys {
+    margin: 12px -18px 0;
+    height: 22px;
+  }
+
+  #ks-chat .examples {
+    grid-template-columns: 1fr;
+  }
+
+  #ks-chat .example:nth-child(n + 5) {
+    display: none;
+  }
+
+  #ks-chat .message-row.user-row {
+    max-width: 90%;
+  }
+
+  #ks-chat .avatar-container {
+    display: none;
+  }
+
+  #ks-chat .message-buttons.with-avatar {
+    margin-left: 0;
+  }
+}
+
+/* Short laptop screens: keep the conversation, not the decoration, in view. */
+@media (max-height: 800px) {
+  .ks-welcome-mark {
+    display: none;
+  }
+
+  .ks-hero {
+    padding-top: 16px;
+  }
+
+  .ks-hero .ks-title {
+    font-size: 36px;
+  }
+}

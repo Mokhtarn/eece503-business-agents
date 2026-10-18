@@ -1,0 +1,72 @@
+{
+  "store": "Keys & Strings Piano & Guitar Shop",
+  "version": "1.0",
+  "effective_date": "2026-10-18",
+  "fictional_policy": true,
+  "currency": "USD",
+  "hours": {
+    "monday": "10:00-18:00",
+    "tuesday": "10:00-18:00",
+    "wednesday": "10:00-18:00",
+    "thursday": "10:00-18:00",
+    "friday": "10:00-18:00",
+    "saturday": "10:00-18:00",
+    "sunday": "Closed"
+  },
+  "showroom": "Beirut, Lebanon; address not assigned. Acoustic-piano and long amplifier demonstrations by appointment.",
+  "orders": {
+    "policy": "Chatbot gives information and can record customer interest; staff must confirm order, invoice, item configuration and any delivery charge. Chatbot cannot process payment, place binding orders, or reserve stock.",
+    "stock_is_synthetic": true,
+    "price_exclusions": "Delivery and optional services are not included in product list prices; taxes or other charges, if applicable, are confirmed by staff.",
+    "special_order": "Zero-stock special-order models show indicative prices only. Staff must confirm sourcing, finish, final quote, lead time and deposit terms before a customer commits."
+  },
+  "pickup": {
+    "cost_usd": 0,
+    "policy": "Free showroom pickup once staff confirms the item is ready. Valid for items that can be collected safely; grand/upright logistics are arranged separately."
+  },
+  "delivery": {
+    "eligible_items": "Boxed guitars, amps, accessories and suitable portable/cabinet digital pianos, subject to staff check.",
+    "beirut_fee_usd": 10,
+    "mount_lebanon_fee_usd": 20,
+    "other_areas": "Staff quote based on location, accessibility and product size.",
+    "typical_beirut_window": "2-5 business days after staff confirmation, illustrative estimate only",
+    "typical_mount_lebanon_window": "3-7 business days after staff confirmation, illustrative estimate only",
+    "acoustic_pianos": "Never use standard parcel delivery rates; professional moving, stairs/access, inspection and any tuning are quoted separately. No fixed delivery time promise.",
+    "no_guaranteed_dates": true
+  },
+  "returns": {
+    "window_calendar_days": 14,
+    "standard_stock": "Unused standard-stock merchandise may be requested for return within 14 calendar days of customer receipt, with proof of purchase, original packaging and all accessories; inspection and eligibility required.",
+    "exclusions": "Custom/special-order products and acoustic pianos are subject to individually agreed sale terms disclosed before purchase; opened consumables such as strings are ordinarily not eligible for change-of-mind return.",
+    "return_shipping": "Customer covers return transport for change-of-mind requests; store reviews damaged, defective or incorrect goods separately.",
+    "refund_timing": "When approved, store aims to process refunds within 10 business days after inspection using the original payment method where possible.",
+    "legal_caveat": "Nothing in these fictional store policies overrides any rights customers may have under applicable consumer law."
+  },
+  "warranties": {
+    "policy": "Manufacturer warranty duration and coverage vary by brand/model, seller region and registration terms. Never guarantee a uniform period.",
+    "handling": "Store helps customers start an inquiry with proof of purchase; manufacturer/dealer terms are verified for the individual product before commitments."
+  },
+  "services": [
+    {
+      "name": "Instrument and setup advice",
+      "price_usd": 0,
+      "details": "Free buying advice and standard in-store demonstrations during opening hours."
+    },
+    {
+      "name": "Guitar restringing (labor only)",
+      "price_usd": 12,
+      "details": "By appointment; strings charged separately."
+    },
+    {
+      "name": "Basic guitar setup (labor only)",
+      "price_usd": 35,
+      "details": "By appointment; replacement parts and unusual repairs quoted separately."
+    },
+    {
+      "name": "Digital piano connectivity orientation",
+      "price_usd": 0,
+      "details": "Brief basic guidance, subject to staff availability; not a technical installation guarantee."
+    }
+  ],
+  "unknown_answers": "If a required fact is absent from the approved data, admit uncertainty and log through record_feedback(question). Do not invent contact details, stock, warranties, suppliers or shipping commitments."
+}
