@@ -68,3 +68,19 @@ logs/
 *.db
 tmp/
 .gradio/
+
+# C4 submission files.
+!/react_agent.py
+!/react_app.py
+!/react_agent.ipynb
+!/requirements-c4.txt
+!/c4_config.py
+!/c4_prompts.py
+!/c4_tools.py
+!/c4_feedback.py
+!/c4_experiments.py
+!/c4_analyze.py
+!/c4_scenarios.json
+!/C4_README.md
+!/docs/C4_RESULTS.json
+# C4 tests, mocks and validation/smoke scripts remain local development helpers.

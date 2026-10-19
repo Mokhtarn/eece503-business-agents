@@ -1,0 +1,267 @@
+[
+  {
+    "id": "beginner_piano",
+    "turns": [
+      "I'm a beginner with $800 for a digital piano for quiet apartment practice. Compare suitable models and check stock."
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "check_inventory"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "persona",
+      "examples"
+    ],
+    "human_review_focus": [
+      "Beginner-friendly versus concise technical explanation",
+      "Grounded suitability, budget and stock"
+    ]
+  },
+  {
+    "id": "guitar_amp",
+    "turns": [
+      "I have $500 total for my first electric guitar and a small amp. Check both prices and stock and suggest a combination within budget."
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "check_inventory"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "guidance",
+      "persona"
+    ],
+    "human_review_focus": [
+      "Combined guitar and amp price is within $500",
+      "Sequential dependent lookups and useful tradeoffs"
+    ]
+  },
+  {
+    "id": "acoustic_classical",
+    "turns": [
+      "Compare a Yamaha FG800 and C40II for a beginner learning folk strumming versus classical music. What do they cost?"
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "check_inventory"
+    ],
+    "required_terms": [
+      "FG800",
+      "C40II"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "persona",
+      "examples"
+    ],
+    "human_review_focus": [
+      "Accessible explanation versus precise construction/specification comparison",
+      "Evidence supports suitability for folk versus classical goals"
+    ]
+  },
+  {
+    "id": "professional",
+    "turns": [
+      "I'm a gigging pianist. Compare Yamaha P-525 and Kawai ES920 from your specifications and stock."
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "check_inventory"
+    ],
+    "required_terms": [
+      "P-525",
+      "ES920"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "persona"
+    ],
+    "human_review_focus": [
+      "Relevant professional specifications and tradeoffs",
+      "Preserve uncertainty rather than adding remembered features"
+    ]
+  },
+  {
+    "id": "flagship",
+    "turns": [
+      "Check the Steinway Model D price, availability and delivery. Can I get it delivered for $10?"
+    ],
+    "expected_tools": [
+      "search_products",
+      "check_inventory",
+      "get_store_policy"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "guidance",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Distinguish indicative special-order price from stock",
+      "Reject the standard $10 delivery rate for an acoustic grand"
+    ]
+  },
+  {
+    "id": "midi",
+    "turns": [
+      "Compare USB MIDI evidence for Roland FP-10 and FP-30X. Does that guarantee audio recording and compatibility with my unspecified tablet?"
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "record_feedback"
+    ],
+    "required_terms": [
+      "FP-10",
+      "FP-30X"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "guidance",
+      "instruction_placement",
+      "persona"
+    ],
+    "human_review_focus": [
+      "Distinguish documented USB MIDI from audio and tablet compatibility",
+      "Acknowledge and log only the actual missing business facts"
+    ]
+  },
+  {
+    "id": "inventory",
+    "turns": [
+      "What are the current price, stock quantity and special-order status of KS-001 and KS-020?"
+    ],
+    "expected_tools": [
+      "check_inventory"
+    ],
+    "required_terms": [
+      "599",
+      "295"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "examples",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Correct IDs, prices, quantities and special-order status",
+      "Avoid unnecessary lookups and unsupported reservations"
+    ]
+  },
+  {
+    "id": "policy",
+    "turns": [
+      "Explain returns, warranties, pickup, Beirut delivery and guitar setup service charges. Are warranty periods identical?"
+    ],
+    "expected_tools": [
+      "get_store_policy"
+    ],
+    "required_terms": [
+      "14",
+      "35"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "instruction_placement",
+      "examples"
+    ],
+    "human_review_focus": [
+      "Accurate return exclusions, warranty variability and delivery/service charges",
+      "Do not log a warranty question already answered by policy"
+    ]
+  },
+  {
+    "id": "lead",
+    "turns": [
+      "I'd like to save a follow-up request for a P-145 demo. My name is Test Musician.",
+      "Use test.musician@example.com. Please save my demo interest for local staff review."
+    ],
+    "expected_tools": [
+      "record_customer_interest"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [
+      "email sent",
+      "appointment confirmed"
+    ],
+    "comparison_focus": [
+      "examples",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Ask for missing customer email without creating feedback",
+      "Use conversation memory and save exactly one authorized lead"
+    ]
+  },
+  {
+    "id": "unanswered",
+    "turns": [
+      "What is the shop's phone number? Please log my question if it isn't available."
+    ],
+    "expected_tools": [
+      "record_feedback"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "examples",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Do not invent a phone number",
+      "Log the actual unanswered question and confirm only a successful save"
+    ]
+  },
+  {
+    "id": "multistep",
+    "turns": [
+      "Find a portable digital piano under $800 with explicit USB MIDI evidence, check its stock and price, and explain Beirut delivery and return conditions."
+    ],
+    "expected_tools": [
+      "search_products",
+      "get_product_details",
+      "check_inventory",
+      "get_store_policy"
+    ],
+    "required_terms": [
+      "14"
+    ],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "guidance",
+      "examples",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Complete product, specifications, price/stock and policy lookups",
+      "Enforce budget and explicitly documented MIDI evidence"
+    ]
+  },
+  {
+    "id": "feedback",
+    "turns": [
+      "Please record this feedback: I would like more left-handed guitar demos."
+    ],
+    "expected_tools": [
+      "record_feedback"
+    ],
+    "required_terms": [],
+    "forbidden_terms": [],
+    "comparison_focus": [
+      "examples",
+      "instruction_placement"
+    ],
+    "human_review_focus": [
+      "Save supplied feedback once",
+      "Do not claim an email, appointment or staff notification"
+    ]
+  }
+]
